@@ -2,6 +2,7 @@ package com.apos.imdb.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,6 +10,7 @@ import lombok.ToString;
 
 import java.util.Set;
 
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

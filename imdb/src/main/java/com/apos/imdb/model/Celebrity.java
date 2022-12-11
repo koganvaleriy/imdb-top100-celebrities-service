@@ -2,6 +2,7 @@ package com.apos.imdb.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,6 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Set;
 
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

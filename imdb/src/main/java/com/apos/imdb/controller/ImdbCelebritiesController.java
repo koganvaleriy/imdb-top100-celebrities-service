@@ -1,7 +1,6 @@
 package com.apos.imdb.controller;
 
 import com.apos.imdb.dto.CelebrityDto;
-import com.apos.imdb.model.Celebrity;
 import com.apos.imdb.service.CelebrityService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -21,13 +20,13 @@ public class ImdbCelebritiesController {
   private CelebrityService celebrityService;
 
   @PostMapping(value = "/celebrities/reset")
-  public ResponseEntity reset() {
+  public ResponseEntity<String> reset() {
     celebrityService.reset();
     return ResponseEntity.ok().body(RESET_SUCCESS_MESSAGE);
   }
 
   @GetMapping(value = "/celebrities/{job}")
-  public ResponseEntity getAllCelebsByJob(@PathVariable String job) {
+  public ResponseEntity<List<CelebrityDto>> getAllCelebsByJob(@PathVariable String job) {
     final List<CelebrityDto> allCelebsByJob = celebrityService.getAllCelebsByJob(job);
     return ResponseEntity.ok(allCelebsByJob);
   }

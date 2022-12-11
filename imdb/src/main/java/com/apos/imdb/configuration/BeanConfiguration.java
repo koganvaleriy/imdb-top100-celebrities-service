@@ -4,7 +4,7 @@ import com.apos.imdb.service.ImdbParsingService;
 import com.apos.imdb.service.ImdbService;
 import org.springframework.context.annotation.Bean;
 
-public class Configuration {
+public class BeanConfiguration {
 
   @Bean
   ImdbService imdbService() {

@@ -12,5 +12,4 @@ class ImdbTop100CelebritiesServiceApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
